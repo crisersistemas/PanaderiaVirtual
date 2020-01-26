@@ -8,12 +8,22 @@ export const ProductCard = ({ product }) => {
 			<img src={product.url_img} className="card-img-top" alt="..." />
 			<div className="card-body">
 				<h5 className="card-title" />
-				<p className="card-text">{"Es una tartaleta con una fresa en una cama de Crema Pastelera "}</p>
+				<p className="card-text">{product.ddesc_prod}</p>
 			</div>
 			<ul className="list-group list-group-flush">
-				<li className="list-group-item"> $0.10</li>
-				<li className="list-group-item">0.25cm</li>
-				<li className="list-group-item">20grs</li>
+				<li className="list-group-item"> Pvp ${product.pvp_prod}</li>
+				<li className="list-group-item">
+					{" "}
+					Tamaño
+					{product.tam_prod * 100}
+					cm
+				</li>
+				<li className="list-group-item">
+					{" "}
+					Peso
+					{product.peso_prod * 1000}
+					grs
+				</li>
 			</ul>
 			<div className="card-body">
 				<a href="#" className="card-link">
