@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useStates } from "react";
 import { images } from "../utils/images";
 import PropTypes from "prop-types";
 
 export const ProductCard = ({ product }) => {
+	/*const [count, setCounter] = useState(0);
+	const addprod = () => {
+		setCounter(count + 1);
+	};
+	const subprod = () => {
+		setCounter(count - 1);
+	};*/
 	return (
-		<div className="card" style={{ width: 18 + "rem" }}>
+		<div className="card col-4">
 			<img src={product.url_img} className="card-img-top" alt="..." />
 			<div className="card-body">
 				<h5 className="card-title" />
-				<p className="card-text">{product.ddesc_prod}</p>
+				<p className="card-text">{product.desc_prod}</p>
 			</div>
 			<ul className="list-group list-group-flush">
 				<li className="list-group-item"> Pvp ${product.pvp_prod}</li>
@@ -19,19 +26,21 @@ export const ProductCard = ({ product }) => {
 					cm
 				</li>
 				<li className="list-group-item">
-					{" "}
 					Peso
 					{product.peso_prod * 1000}
 					grs
 				</li>
 			</ul>
 			<div className="card-body">
-				<a href="#" className="card-link">
-					Card link
-				</a>
-				<a href="#" className="card-link">
-					Another link
-				</a>
+				<div>Compra</div>
+				<div>
+					{/*	<span className="input-group-btn">
+						<button className="btn btn-default" id="carga" onClick="addprod()" type="button">
+							+
+						</button>
+                    </span>*/}
+					<input type="text" id="contador" className="form-control" placeholder="1" value="1" />
+				</div>
 			</div>
 		</div>
 	);
