@@ -66,6 +66,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					tam_prod: 0.25,
 					cos_prod: 0.14
 				}
+			],
+			orders: [
+				{
+					id_prod: 1,
+					cantidad: 5
+				}
 			]
 		},
 		actions: {
