@@ -20,7 +20,7 @@ export const ShoppingCar = () => {
 					</div>
 					<div className="col-4">
 						<ul className="list-group">
-							{store.orders.map(order => {
+							{store.orderProduct.map(order => {
 								return <OrderList key={order.id_prod} order={order} />;
 							})}
 						</ul>
