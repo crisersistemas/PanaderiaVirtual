@@ -19,11 +19,16 @@ export const ShoppingCar = () => {
 						</div>
 					</div>
 					<div className="col-4">
-						<ul className="list-group">
-							{store.orderProduct.map(order => {
-								return <OrderList key={order.id_prod} order={order} />;
-							})}
-						</ul>
+						<div>
+							<ul className="list-group">
+								{store.orderProduct.map(order => {
+									return <OrderList key={order.id_prod} order={order} />;
+								})}
+							</ul>
+						</div>
+						<button className="btn btn-primary" type="submit">
+							CONFIRMA PEDIDO
+						</button>
 					</div>
 				</div>
 			</div>

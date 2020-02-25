@@ -1,15 +1,16 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
+import logoVibra from "../../img/logoVibra.jpg";
 import "../../styles/home.scss";
 
 export const Home = () => (
 	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
+		<h1>Bienvenidos </h1>
 		<p>
-			<img src={rigoImage} />
+			<img src={logoVibra} />
 		</p>
 		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
+			la Panaderia Virtual
 		</a>
 	</div>
 );
