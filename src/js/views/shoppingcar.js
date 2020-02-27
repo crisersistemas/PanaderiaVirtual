@@ -4,9 +4,11 @@ import { Context } from "../store/appContext";
 import { ProductCard } from "../component/productcard";
 import { OrderList } from "../component/orderlist";
 import PropTypes from "prop-types";
+import { viewprodname, viewprodpvp, viewOrderTotal } from "../utils/utils";
 
 export const ShoppingCar = () => {
 	const { store, actions } = useContext(Context);
+
 	return (
 		<React.Fragment>
 			<div className="container">
@@ -26,6 +28,7 @@ export const ShoppingCar = () => {
 								})}
 							</ul>
 						</div>
+						<div>{"el monto total es " + viewOrderTotal()}</div>
 						<button className="btn btn-primary" type="submit">
 							CONFIRMA PEDIDO
 						</button>

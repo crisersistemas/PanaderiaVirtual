@@ -69,10 +69,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// }
 			],
 			orderProduct: [
-				{
-					id_prod: 1,
-					quantity: 5
-				}
+				//{
+				//	id_prod: 1,
+				//	quantity: 5
+				//}
 			]
 		},
 		actions: {
@@ -126,7 +126,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					newOrder.push(newProduct);
 				}
 				setStore({
-					order: newOrder
+					orderProduct: newOrder
 				});
 				// for (let orderedProduct of currentStore.order) {
 				//     if (orderedProduct.id_prod == idProd) {

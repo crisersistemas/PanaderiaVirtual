@@ -8,12 +8,18 @@ export const ProductCard = ({ product }) => {
 	const { store, actions } = useContext(Context);
 	const addprod = () => {
 		setCounter(count + 1);
-		actions.updateOrder(product.id_prod, count);
+		if (count + 1 >= 0) {
+			actions.updateOrder(product.id_prod, count + 1);
+		} else {
+			setCounter(0);
+		}
 	};
 	const subprod = () => {
 		setCounter(count - 1);
-		if (count >= 0) {
-			actions.updateOrder(product.id_prod, count);
+		if (count - 1 >= 0) {
+			actions.updateOrder(product.id_prod, count - 1);
+		} else {
+			setCounter(0);
 		}
 	};
 	const negprod = () => {
@@ -31,17 +37,15 @@ export const ProductCard = ({ product }) => {
 				<p className="card-text">{product.desc_prod}</p>
 			</div>
 			<ul className="list-group list-group-flush">
-				<li className="list-group-item"> Pvp ${product.pvp_prod}</li>
+				<li className="list-group-item"> Pvp ${product.pvp_prod.toFixed(2)}</li>
 				<li className="list-group-item">
 					{" "}
-					Tamaño
-					{product.tam_prod * 100}
-					cm
+					<span>Tamaño</span>
+					<span>{product.tam_prod * 100} cm</span>
 				</li>
 				<li className="list-group-item">
-					Peso
-					{product.peso_prod * 1000}
-					grs
+					<span>Peso</span>
+					<span>{product.peso_prod * 1000} grs</span>
 				</li>
 			</ul>
 			<div className="card-body">
